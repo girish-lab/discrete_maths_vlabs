@@ -1,0 +1,21 @@
+{
+  "name": "Dicrete Maths Vlabs Experiments",
+  "source": ["src/index.html", "src/1_partial_order.html", "src/2_equivalence_relation.html", "src/3_diagonalization.html", "src/4_recursion.html", "src/6_graph_coloring.html"],
+  "scripts": {
+    "serve": "parcel src/index.html",
+    "build": "parcel build src/*.html"
+  },
+  "targets": {
+    "main": {
+		  "optimize": true
+	  }
+  },
+  "dependencies": {
+    "cytoscape": "^3.23.0",
+    "cytoscape-dagre": "^2.2.2"
+  },
+  "devDependencies": {
+    "@types/cytoscape": "^3.19.8",
+    "parcel": "^2.7.0"
+  }
+}
