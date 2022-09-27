@@ -14,6 +14,34 @@
 <p>
     Color the graph bellow using 3 colors (red, blue, green). Edges for which both end points have same colors turns red.
 </p>
+
+<style>
+    .button {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+    
+    .button1{font-size: 24px;}
+    
+</style>
+
+<button class="button button1" onClick="Refresh()">NEXT</button>
+<script>
+    function Refresh() {
+        window.parent.location = window.parent.location.href;
+    }
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
 <div id="cy"></div>
 <!-- Load application code at the end to ensure DOM is loaded -->
 <script type="module" src="js/6_coloring.js"></script>
