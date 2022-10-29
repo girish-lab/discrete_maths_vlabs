@@ -7,14 +7,13 @@
     name="viewport"
     content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1"
 />
-<link href="css/style.css" rel="stylesheet" />
+<link href="css/towerofhanoi.css" rel="stylesheet" />
 </head>
 
 <body>
-<h1>Find the edges in Hasse diagram.</h1>
+<h1>TOWER OF HANOI</h1>
 <p>
-    Given bellow is a partial order. Click the edges that belong to the Hasse
-    Diagram. Wrong edges turns red and correct edges turns green. 
+    Move all discs to last pole, large dics cant be placed on small disc.TRy to finish in 127 moves.
 </p>
 
 
@@ -37,7 +36,8 @@
     
 </style>
 
-<button class="button button1" onClick="Refresh()">NEXT</button>
+<button class="button button1" onClick="Refresh()">Restart</button>
+
 <script>
     function Refresh() {
         window.parent.location = window.parent.location.href;
@@ -45,10 +45,25 @@
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<div id="console"></div>
 
-<div id="cy"></div>
+<div id="canves">
+    <div class="restart"><i class="fa fa-repeat"></i></div>
+    <div class="curtain"></div>
+    <ul id="score-panel">
+        <li><i class="fa fa-star"></i></li>
+        <li><i class="fa fa-star"></i></li>
+        <li><i class="fa fa-star"></i></li>
+        <li>
+            <h1> <span id="moves-num"></span><span> Moves </span></h1>
+        </li>
+    </ul>
+    <ul class="tower" id="tower-1"></ul>
+    <ul class="tower" id="tower-2"></ul>
+    <ul class="tower" id="tower-3"></ul>
+</div>
+
 <!-- Load application code at the end to ensure DOM is loaded -->
-<script type="module" src="js/code.js"></script>
+<script type="module" src="js/towerofhanoi.js"></script>
 </body>
 </html>
+
